@@ -22,6 +22,7 @@ services:
       - mysql
   mysql:
     image: mysql
+    container_name: mysql
     command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
     ports:
       - 3306:3306
@@ -31,5 +32,9 @@ services:
       - symfony
     environment:
       MYSQL_ROOT_PASSWORD: auctions2023
+      MYSQL_ROOT_USER: root
+      MYSQL_DATABASE: auctions
+      MYSQL_USER: root
+      MYSQL_PASSWORD: auctions2023
 networks:
   symfony:

@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block title %}Index{% endblock %}
+{% block body %}
+    <h1>The auction created on {{ auctionDate|date('Y-m-d') }} at {{ auctionDate|date('H:i:s') }}: </h1>
+    <h2> Winner:</h2>
+    <p class="important">
+      {{ winner.getName }}
+    </p>
+    <h2> Winning Bid was:</h2>
+    <p class="important">
+        {{ winnerBid.getValue }}&euro;
+    </p>
+{% endblock %}
