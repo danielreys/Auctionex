@@ -1,0 +1,15 @@
+<!-- phpunit.xml -->
+<phpunit  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+          backupGlobals="false"
+          colors="true"
+          bootstrap="tests/bootstrap.php"
+          convertDeprecationsToExceptions="false">
+
+    <testsuites>
+        <testsuite name="application">
+            <directory>tests/App/Application</directory>
+        </testsuite>
+    </testsuites>
+
+</phpunit>
